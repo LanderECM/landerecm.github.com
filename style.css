@@ -1,0 +1,28 @@
+ #begin {
+    color: black;
+    background-color: white;
+    background-color: navy;
+    border: 10px solid navy;
+    box-shadow: 2px, 2px, 1px;
+}
+#middle {
+    color: black;
+}
+#TiTe {
+    float: left;
+
+}
+#time {
+    float: left;
+    margin-left: 1px;
+}
+p {
+    color: blue;
+    background-color: red;
+    color: black;
+    background-color: blue;
+}
+
+.input {
+	margin-top: 5px;
+}
