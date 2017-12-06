@@ -8,8 +8,10 @@
 #b1{
     float: left;
     margin-top: 10px;
+    margin-left: 40%;
 }
 #b2 {
     float: right;
     margin-top: 10px;
+    margin-right: 40%;
 }
