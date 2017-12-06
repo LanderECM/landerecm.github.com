@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>WebSite</title>;
-    <link rel="stylesheet" style="text/css" href="style.css">
-    <script src="java.js"></script>
-</head>
-<body>
-    <div id="begin" align="middle">
-        <h1>Website</h1>
-        <p>This is my Website</p>
-    </div> 
-
-    <div id="middle"> 
-        <p id=TiTe> The current time: </p>
-        <p id="time">timer here</p>
-    </div>
-    <div>
- <form id="frm1" action="/ action_page.php">
-            <input type="text" name="fname">
-            <input type="text" name="lname">
- </form>
-     <button onClick="myFunc()">Send</button>
-    </div>
-    <p id="text" align="center"></p>
-</body>
+    <head>
+        <title>Ping Pong Score</title>
+        <script src="java.js"></script>
+        <link ref="stylesheet" type ="text/css" href="style.css" media="screen"/>
+    </head>
+    <body>
+      <div id="table" align = "center">
+        <table border="1"id="border">
+            <tr>
+                <td>Score:</td>
+                <td>Punten</td>
+                <td>sets</td>
+            </tr>
+            <tr>
+                <td><input type = "text" placeholder ="player 1" id="p"/></td>
+                <td><p id = "x1"></p></td>
+                <td><p id = "y1"></p></td>
+            </tr>
+            <tr>
+                <td><input type = "text"    placeholder ="player 2" id="p"/></td>
+                <td><p id = "x2"></p></td>
+                <td><p id = "y2"></p></td>
+            </tr>
+        </table>
+          </div>
+          <div>
+              <button onClick = "score1()" id = "b1">player 1</button>
+              <button onClick = "score2()" id = "b2">player 2</button>
+          </div>
+          <img src="pingpong.jpg alt=""/>
+    </body>
 </html>
