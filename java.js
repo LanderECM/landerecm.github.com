@@ -16,3 +16,9 @@ function score2 (){
     var x2 = document.getElementById("x2");
     x2.innerHTML++;
 }
+function names (){
+    var x = document.getElementById("n1");
+    var z1 = x.elements[0].value;   document.getElementById("name1").innerHTML  = z1;
+    var y = document.getElementById("n2");
+    var z2 = y.elements[0].value;    document.getElementById("name2").innerHTML = z2;
+}
