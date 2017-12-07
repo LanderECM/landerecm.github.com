@@ -21,7 +21,9 @@ body {
 #b3 {
     margin-top: 15px;
 }
-#cells {
-    
+#cells {   
     background-color: red;
+}
+#end_screen {
+    margin-top: 25px;
 }
