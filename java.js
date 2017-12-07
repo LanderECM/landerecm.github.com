@@ -59,19 +59,36 @@ function check_match () {
     var b = document.getElementById("n2");
     var z2 = b.elements[0].value;
 	if (y1.innerHTML == 3) {
-        x1 = 0;
-        x2 = 0;
-        y1 = 0;
-        y2 = 0; 
+        x1.innerHTML = 0;
+        x2.innerHTML = 0;
+        y1.innerHTML = 0;
+        y2.innerHTML = 0; 
         var end_text = "The game has ended, " + z1 + " has won the game."
         document.getElementById("end_screen").innerHTML = end_text;
 	}
 	if (y2.innerHTML == 3) {
-		x1 = 0;
-        x2 = 0;
-        y1 = 0;
-        y2 = 0; 
+		x1.innerHTML = 0;
+        x2.innerHTML = 0;
+        y1.innerHTML = 0;
+        y2.innerHTML = 0; 
         var end_text = "The game has ended, " + z2 + " has won the game."
         document.getElementById("end_screen").innerHTML = end_text;
+        var game_again = "Do you want to play again?";
+        document.getElementById("new_game").innerHTML = game_again;
 	} 
+}
+
+function new_game () {
+	x1.innerHTML = 0;
+    x2.innerHTML = 0;
+    y1.innerHTML = 0;
+    y2.innerHTML = 0;
+    var new_game_text = "Have a good game!";
+    document.getElementById("end_screen").innerHTML = new_game_text;
+    var new_player1 = "player 1";
+    var new_player2 = "player 2";
+    document.getElementById("name1").innerHTML  = new_player1;
+    document.getElementById("name2").innerHTML  = new_player2;
+    document.getElementById("nam1").value  = "player 1";
+    document.getElementById("nam2").value  = "player 2";
 }
