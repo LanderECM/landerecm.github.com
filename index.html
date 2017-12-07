@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PingPong Score</title>
+        <title>Ping Pong Score</title>
         <script src="java.js"></script>
-        <link rel="stylesheet" type ="text/css" href="style.css" media="screen"/>
+        <link rel="stylesheet" type = "text/css" href="style.css"/>
     </head>
     <body>
       <div id="table" align = "center">
@@ -14,20 +14,21 @@
                 <td>sets</td>
             </tr>
             <tr>
-                <td><input type = "text" placeholder ="player 1" id="p"/></td>
+                <td><form id="n1" action="/action_page.php"><input type = "text" value="player 1"name ="nam1" /></form></td>
                 <td><p id = "x1"></p></td>
                 <td><p id = "y1"></p></td>
             </tr>
             <tr>
-                <td><input type = "text"    placeholder ="player 2" id="p"/></td>
+                <td><form id="n2"action="/action_page.php"><input type = "text" name ="nam2" value="player 2"/></form></td>
                 <td><p id = "x2"></p></td>
                 <td><p id = "y2"></p></td>
             </tr>
         </table>
           </div>
           <div>
-              <button onClick = "score1()" id = "b1">player 1</button>
-              <button onClick = "score2()" id = "b2">player 2</button>
+              <button onClick = "score1()" id = "b1"><p id="name1">player 1</p></button>
+              <button onClick = "score2()" id = "b2"><p id="name2">player 2</p></button>   
+              <button onClick = "names()"  id = "b3">confirm names</button>         
           </div>
     </body>
 </html>
