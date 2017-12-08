@@ -1,3 +1,6 @@
+var serve1 = 0;
+var serve2 = 0;
+var set_serve = 1;
 window.onload = function (){
 var x1 = document.getElementById("x1");
 x1.innerHTML = 0;
@@ -21,6 +24,7 @@ function score1 (){
     var x2 = document.getElementById("x2");
     x1.innerHTML++;
     check_set();
+    serve_counter();
 }
 
 function score2 (){
@@ -28,6 +32,7 @@ function score2 (){
     var x2 = document.getElementById("x2");
     x2.innerHTML++;
     check_set();
+    serve_counter();
 }
 
 function check_set () {
@@ -38,6 +43,8 @@ function check_set () {
     	y1.innerHTML++;
     	x1.innerHTML = 0;
     	x2.innerHTML = 0;
+        serve1 = 0;
+        serve2 = 0;
     	check_match();
     }	
     if ((x2.innerHTML >= 11) && (x2.innerHTML - x1.innerHTML >= 2)) {
@@ -45,6 +52,8 @@ function check_set () {
     	y2.innerHTML++;
     	x1.innerHTML = 0;
     	x2.innerHTML = 0;
+        serve1 = 0;
+        serve2 = 0;
     	check_match();
     }	
 }    
@@ -91,4 +100,46 @@ function new_game () {
     document.getElementById("name2").innerHTML  = new_player2;
     document.getElementById("nam1").value  = "player 1";
     document.getElementById("nam2").value  = "player 2";
+    document.getElementById("setP1").style.backgroundColor = "blue";
+	document.getElementById("setP2").style.backgroundColor = "red";
+    serve1 = 0;
+	serve2 = 0;
+	set_serve = 1;
 }
+
+function serve_counter () {
+	serve2++;
+    if (((y1.innerHTML + y2.innerHTML == 1) || (y1.innerHTML + y2.innerHTML == 3)) && (x1.innerHTML + x2.innerHTML == 0)) {
+        set_serve = 0;
+        serve2 = 0;   
+    }
+    else if (x1.innerHTML + x2.innerHTML == 0){
+        set_serve = 1;
+        serve2 = 0;
+    }
+    if (serve2 - serve1 >= 2){
+	    if (set_serve == 1){
+	        document.getElementById("setP2").style.backgroundColor = "blue";
+	        document.getElementById("setP1").style.backgroundColor = "red";
+	        set_serve = 0;
+        }
+    	else {
+    		document.getElementById("setP1").style.backgroundColor = "blue";
+    		document.getElementById("setP2").style.backgroundColor = "red";
+	    	if (x1.innerHTML + x2.innerHTML != 0){
+            set_serve = 1;
+        }
+        else {
+            set_serve = 0;
+        }
+    	}			
+    serve1 = serve2;
+	}
+}
+
+function check () {
+var serve_check = serve1 + ", en: " + serve2 + "+nog dit" + set_serve;
+document.getElementById("check_serve").innerHTML = serve_check;
+}
+
+setInterval(check, 1000);

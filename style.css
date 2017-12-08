@@ -27,3 +27,9 @@ body {
 #end_screen {
     margin-top: 25px;
 }
+#setP1 {
+    background-color: blue;
+}
+#setP2 {
+    background-color: red;
+}
