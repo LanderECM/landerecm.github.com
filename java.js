@@ -111,10 +111,12 @@ function serve_counter () {
 	serve2++;
     if (((y1.innerHTML + y2.innerHTML == 1) || (y1.innerHTML + y2.innerHTML == 3)) && (x1.innerHTML + x2.innerHTML == 0)) {
         set_serve = 0;
+        serve1 = 0;
         serve2 = 0;   
     }
-    else if (x1.innerHTML + x2.innerHTML == 0){
+    else if (((y1.innerHTML + y2.innerHTML == 0) || (y1.innerHTML + y2.innerHTML == 2) || (y1.innerHTML + y2.innerHTML == 4)) && (x1.innerHTML + x2.innerHTML == 0))  {
         set_serve = 1;
+        serve1 = 0;
         serve2 = 0;
     }
     if (serve2 - serve1 >= 2){
@@ -126,20 +128,15 @@ function serve_counter () {
     	else {
     		document.getElementById("setP1").style.backgroundColor = "blue";
     		document.getElementById("setP2").style.backgroundColor = "red";
-	    	if (x1.innerHTML + x2.innerHTML != 0){
             set_serve = 1;
         }
-        else {
-            set_serve = 0;
-        }
-    	}			
     serve1 = serve2;
 	}
 }
 
 function check () {
-var serve_check = serve1 + ", en: " + serve2 + "+nog dit" + set_serve;
+var serve_check = serve1 + ", " + serve2 + ", " + set_serve;
 document.getElementById("check_serve").innerHTML = serve_check;
 }
 
-setInterval(check, 1000);
+setInterval(check, 100);
