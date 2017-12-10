@@ -1,6 +1,3 @@
-var serve1 = 0;
-var serve2 = 0;
-var set_serve = 1;
 window.onload = function (){
 var x1 = document.getElementById("x1");
 x1.innerHTML = 0;
@@ -43,8 +40,6 @@ function check_set () {
     	y1.innerHTML++;
     	x1.innerHTML = 0;
     	x2.innerHTML = 0;
-        serve1 = 0;
-        serve2 = 0;
     	check_match();
     }	
     if ((x2.innerHTML >= 11) && (x2.innerHTML - x1.innerHTML >= 2)) {
@@ -52,8 +47,6 @@ function check_set () {
     	y2.innerHTML++;
     	x1.innerHTML = 0;
     	x2.innerHTML = 0;
-        serve1 = 0;
-        serve2 = 0;
     	check_match();
     }	
 }    
@@ -102,41 +95,31 @@ function new_game () {
     document.getElementById("nam2").value  = "player 2";
     document.getElementById("setP1").style.backgroundColor = "blue";
 	document.getElementById("setP2").style.backgroundColor = "red";
-    serve1 = 0;
-	serve2 = 0;
-	set_serve = 1;
 }
 
 function serve_counter () {
-	serve2++;
-    if (((y1.innerHTML + y2.innerHTML == 1) || (y1.innerHTML + y2.innerHTML == 3)) && (x1.innerHTML + x2.innerHTML == 0)) {
-        set_serve = 0;
-        serve1 = 0;
-        serve2 = 0;   
-    }
-    else if (((y1.innerHTML + y2.innerHTML == 0) || (y1.innerHTML + y2.innerHTML == 2) || (y1.innerHTML + y2.innerHTML == 4)) && (x1.innerHTML + x2.innerHTML == 0))  {
-        set_serve = 1;
-        serve1 = 0;
-        serve2 = 0;
-    }
-    if (serve2 - serve1 >= 2){
-	    if (set_serve == 1){
-	        document.getElementById("setP2").style.backgroundColor = "blue";
-	        document.getElementById("setP1").style.backgroundColor = "red";
-	        set_serve = 0;
+    var pScore1 = Number(x1.innerHTML);
+    var pScore2 = Number(x2.innerHTML);
+    var pSet1 = Number(y1.innerHTML);
+    var pSet2 = Number(y2.innerHTML);
+    if ((pSet1 + pSet2) % 2 == 0){
+        if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
+            document.getElementById("setP1").style.backgroundColor = "blue";
+            document.getElementById("setP2").style.backgroundColor = "red";
         }
-    	else {
-    		document.getElementById("setP1").style.backgroundColor = "blue";
-    		document.getElementById("setP2").style.backgroundColor = "red";
-            set_serve = 1;
+        else{
+            document.getElementById("setP2").style.backgroundColor = "blue";
+            document.getElementById("setP1").style.backgroundColor = "red";
         }
-    serve1 = serve2;
-	}
+    }
+    else {
+        if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
+            document.getElementById("setP2").style.backgroundColor = "blue";
+            document.getElementById("setP1").style.backgroundColor = "red";
+        }
+        else{
+            document.getElementById("setP1").style.backgroundColor = "blue";
+            document.getElementById("setP2").style.backgroundColor = "red";
+        }
+    }
 }
-
-function check () {
-var serve_check = serve1 + ", " + serve2 + ", " + set_serve;
-document.getElementById("check_serve").innerHTML = serve_check;
-}
-
-setInterval(check, 100);
