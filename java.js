@@ -1,13 +1,13 @@
-window.onload = function (){
-var x1 = document.getElementById("x1");
-x1.innerHTML = 0;
-var x2 = document.getElementById("x2");
-x2.innerHTML = 0;
-var y1 = document.getElementById("y1");
 y1.innerHTML = 0;
 var y2 = document.getElementById("y2");
 y2.innerHTML = 0;
 }
+
+var Points = new Array(4);
+Points[0] = 0;
+Points[1] = 0;
+Points[2] = 0;
+Points[3] = 0;
 
 function names (){
     var x = document.getElementById("n1");
@@ -19,7 +19,13 @@ function names (){
 function score1 (){
     var x1 = document.getElementById("x1");
     var x2 = document.getElementById("x2");
+    var y1 = document.getElementById("y1");
+    var y2 = document.getElementById("y2");
     x1.innerHTML++;
+    Points[0] = x1.innerHTML - 1;
+    Points[1] = x2.innerHTML;
+    Points[2] = y1.innerHTML;
+    Points[3] = y2.innerHTML;
     check_set();
     serve_counter();
 }
@@ -27,7 +33,13 @@ function score1 (){
 function score2 (){
     var x1 = document.getElementById("x1");
     var x2 = document.getElementById("x2");
+    var y1 = document.getElementById("y1");
+    var y2 = document.getElementById("y2");
     x2.innerHTML++;
+    Points[1] = x2.innerHTML - 1;
+    Points[0] = x1.innerHTML;
+    Points[2] = y1.innerHTML;
+    Points[3] = y2.innerHTML;
     check_set();
     serve_counter();
 }
@@ -122,4 +134,15 @@ function serve_counter () {
             document.getElementById("setP2").style.backgroundColor = "red";
         }
     }
+}
+
+function reset () {
+    var x1 = document.getElementById("x1");
+    var x2 = document.getElementById("x2");
+    var y1 = document.getElementById("y1");
+    var y2 = document.getElementById("y2");
+    x1.innerHTML = Points[0];
+    x2.innerHTML = Points[1];
+    y1.innerHTML = Points[2];
+    y2.innerHTML = Points[3];
 }
