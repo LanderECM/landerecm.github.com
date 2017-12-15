@@ -151,4 +151,5 @@ function reset () {
     x2.innerHTML = Points[1];
     y1.innerHTML = Points[2];
     y2.innerHTML = Points[3];
+    serve_counter();
 }
