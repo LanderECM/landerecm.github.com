@@ -12,6 +12,7 @@ body {
     float: left;
     margin-top: 10px;
     margin-left: 41%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 #b2 {
     float: right;
