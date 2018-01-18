@@ -109,7 +109,7 @@ function new_game () {
     var new_player2 = "player 2";
     document.getElementById("P1_name_btn").innerHTML  = new_player1;
     document.getElementById("P2_name_btn").innerHTML  = new_player2;
-    document.getElementById("P1_name_").value  = "player 1";
+    document.getElementById("P1_name_change").value  = "player 1";
     document.getElementById("P2_name_change").value  = "player 2";
     document.getElementById("setP1").style.backgroundColor = "black";
 	document.getElementById("setP2").style.backgroundColor = "lightgrey";
