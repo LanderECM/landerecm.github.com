@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 .img{
     background-image: url("pingpong.jpg");
@@ -16,8 +17,6 @@ body, html {
     padding-left: 8px;    
     border-collapse: collapse;
     background-color: lightgray;
-    width: 80%;
-    height: 80%;
 }
 td, tr {
     padding: 25px;
@@ -26,13 +25,11 @@ td, tr {
 .div_table {    
     border: grey;
     height: 80%;
+    width: 100%;
 }
 #setP1 {
     background-color: black;
 }
 #setP2 {
     background-color: lightgrey;
-}
-.cells2 {
-    width: 40%;
 }
