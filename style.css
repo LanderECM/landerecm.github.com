@@ -24,7 +24,7 @@ td, tr {
 }
 .div_table {    
     border: grey;
-    height: 80%;
+    height: 75%;
     width: 100%;
 }
 #setP1 {
@@ -32,4 +32,15 @@ td, tr {
 }
 #setP2 {
     background-color: lightgrey;
+}
+.btn {
+
+}
+#b1 {
+    position: absolute;
+    left: 0px;
+}
+#b2 {
+    position: absolute;
+    right: 0px;
 }
