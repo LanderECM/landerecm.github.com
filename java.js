@@ -112,7 +112,7 @@ function new_game () {
     document.getElementById("P1_name_change").value  = "player 1";
     document.getElementById("P2_name_change").value  = "player 2";
     document.getElementById("setP1").style.backgroundColor = "black";
-	document.getElementById("setP2").style.backgroundColor = "lightgrey";
+    document.getElementById("setP2").style.backgroundColor = "lightgrey";
 }
 
 function serve_counter () {
