@@ -1,35 +1,46 @@
-body {
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.img{
     background-image: url("pingpong.jpg");
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
-#border {
-    border-color: red;
-    border-top-color: blue;
-    border-right-color: blue
-    border-left-color: blue;
-    border-bottom-color: blue;
+.table {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 8px;    
+    border-collapse: collapse;
+    background-color: lightgray;
 }
-#b1{
-    float: left;
-    margin-top: 10px;
-    margin-left: 41%;
+td, tr {
+    padding: 25px;
+    font-size: 40px;
 }
-#b2 {
-    float: right;
-    margin-top: 10px;
-    margin-right: 41%;
-}
-#b3 {
-    margin-top: 15px;
-}
-#cells {   
-    background-color: red;
-}
-#end_screen {
-    margin-top: 25px;
+.div_table {    
+    border: grey;
+    height: 75%;
+    width: 100%;
 }
 #setP1 {
-    background-color: blue;
+    background-color: black;
 }
 #setP2 {
-    background-color: red;
+    background-color: lightgrey;
+}
+.btn {
+
+}
+#b1 {
+    position: absolute;
+    left: 0px;
+}
+#b2 {
+    position: absolute;
+    right: 0px;
 }
