@@ -51,43 +51,43 @@ function score2 (){
 }
 
 function check_set () {
-	var P1_points = document.getElementById("P1_points");
-	var P1_sets = document.getElementById("P1_sets");
+    var P1_points = document.getElementById("P1_points");
+    var P1_sets = document.getElementById("P1_sets");
     if ((P1_points.innerHTML >= 11) && (P1_points.innerHTML - P1_sets.innerHTML >= 2)) {
-    	var P2_points = document.getElementById("P2_points");
-    	P2_points.innerHTML++;
-    	P1_points.innerHTML = 0;
-    	P1_sets.innerHTML = 0;
-    	check_match();
-    }	
+        var P2_points = document.getElementById("P2_points");
+        P2_points.innerHTML++;
+        P1_points.innerHTML = 0;
+        P1_sets.innerHTML = 0;
+        check_match();
+    }   
     if ((P1_sets.innerHTML >= 11) && (P1_sets.innerHTML - P1_points.innerHTML >= 2)) {
-    	var P2_sets = document.getElementById("P2_sets");
-    	P2_sets.innerHTML++;
-    	P1_points.innerHTML = 0;
-    	P1_sets.innerHTML = 0;
-    	check_match();
-    }	
+        var P2_sets = document.getElementById("P2_sets");
+        P2_sets.innerHTML++;
+        P1_points.innerHTML = 0;
+        P1_sets.innerHTML = 0;
+        check_match();
+    }   
 }    
 
 function check_match () {
-	var P1_points = document.getElementById("P1_points");
-	var P1_sets = document.getElementById("P1_sets");
-	var P2_points = document.getElementById("P2_points");
-	var P2_sets = document.getElementById("P2_sets");
-	var x = document.getElementById("P1_name");
+    var P1_points = document.getElementById("P1_points");
+    var P1_sets = document.getElementById("P1_sets");
+    var P2_points = document.getElementById("P2_points");
+    var P2_sets = document.getElementById("P2_sets");
+    var x = document.getElementById("P1_name");
     var z1 = x.elements[0].value;
     var y = document.getElementById("P2_name");
     var z2 = y.elements[0].value;
-	if (P2_points.innerHTML == 3) {
+    if (P2_points.innerHTML == 3) {
         P1_points.innerHTML = 0;
         P1_sets.innerHTML = 0;
         P2_points.innerHTML = 0;
         P2_sets.innerHTML = 0; 
         var end_text = "The game has ended, " + z1 + " has won the game."
         document.getElementById("end_screen").innerHTML = end_text;
-	}
-	if (P2_sets.innerHTML == 3) {
-		P1_points.innerHTML = 0;
+    }
+    if (P2_sets.innerHTML == 3) {
+        P1_points.innerHTML = 0;
         P1_sets.innerHTML = 0;
         P2_points.innerHTML = 0;
         P2_sets.innerHTML = 0; 
@@ -95,11 +95,11 @@ function check_match () {
         document.getElementById("end_screen").innerHTML = end_text;
         var game_again = "Do you want to play again?";
         document.getElementById("new_game").innerHTML = game_again;
-	} 
+    } 
 }
 
 function new_game () {
-	P1_points.innerHTML = 0;
+    P1_points.innerHTML = 0;
     P1_sets.innerHTML = 0;
     P2_points.innerHTML = 0;
     P2_sets.innerHTML = 0;
