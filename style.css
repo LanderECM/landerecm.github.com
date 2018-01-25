@@ -3,6 +3,7 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: arial;
 }
 .img{
     background-image: url("pingpong.jpg");
@@ -21,6 +22,7 @@ body, html {
 td, tr {
     padding: 25px;
     font-size: 40px;
+    border-bottom: 1px solid darkgrey;
 }
 .div_table {    
     border: grey;
@@ -28,19 +30,25 @@ td, tr {
     width: 100%;
 }
 #setP1 {
-    background-color: black;
+    background-color: grey;
 }
 #setP2 {
     background-color: lightgrey;
 }
-.btn {
-
+.div1 {
+    float: left;
 }
-#b1 {
-    position: absolute;
-    left: 0px;
+.div2 {
+    display: inline-block;
+    background-image: url("pingpong.jpg");
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
-#b2 {
-    position: absolute;
-    right: 0px;
+.div3 {
+    float: right;
+}
+#row_top {
+    font-weight: bold;
 }
