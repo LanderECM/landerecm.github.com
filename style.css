@@ -14,7 +14,6 @@ body, html {
     background-size: cover;
 }
 .table {
-    border-radius: 5px;
     border: 1px solid black;
     padding-left: 8px;    
     border-collapse: collapse;
@@ -27,7 +26,7 @@ td, tr {
 }
 .div_table {    
     border: grey;
-    height: 75%;
+    height: 74%;
     width: 100%;
 }
 #setP1 {
@@ -49,7 +48,7 @@ td, tr {
     font-weight: bold;
 }
 #game_text {
-    margin-top: 10%;
+    margin-top: 1%;
 }
 #div_text {
     display: inline-block;
