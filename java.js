@@ -83,14 +83,20 @@ function check_match () {
         P1_sets.innerHTML = 0;
         P2_points.innerHTML = 0;
         P2_sets.innerHTML = 0; 
-        alert("The game has ended, " + z1 + " has won the game.");
+        document.getElementById("popup_big").style.display = "block";
+        document.getElementById("popup").style.backgroundColor = "#0B6CF0";
+        document.getElementById("popup_big").style.backgroundColor = "#005BD6";
+        document.getElementById("popup_text").innerHTML = "The game has ended, " + z1 + " has won the game.";
     }
     if (P2_sets.innerHTML == 3) {
         P1_points.innerHTML = 0;
         P1_sets.innerHTML = 0;
         P2_points.innerHTML = 0;
         P2_sets.innerHTML = 0; 
-        alert("The game has ended, " + z2 + " has won the game.");
+        document.getElementById("popup_big").style.display = "block";
+        document.getElementById("popup").style.backgroundColor = "#0B6CF0";
+        document.getElementById("popup_big").style.backgroundColor = "#005BD6";
+        document.getElementById("popup_text").innerHTML = "The game has ended, " + z2 + " has won the game.";
     } 
 }
 
@@ -105,8 +111,8 @@ function new_game () {
     document.getElementById("P2_name_btn").innerHTML  = new_player2;
     document.getElementById("P1_name_change").value  = "player 1";
     document.getElementById("P2_name_change").value  = "player 2";
-    document.getElementById("setP1").style.backgroundColor = "grey";
-    document.getElementById("setP2").style.backgroundColor = "lightgrey";
+    document.getElementById("setP1").style.backgroundColor = "#005BD6";
+    document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
 }
 
 function serve_counter () {
@@ -116,22 +122,30 @@ function serve_counter () {
     var pSet2 = Number(P2_sets.innerHTML);
     if ((pSet1 + pSet2) % 2 == 0){
         if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
-            document.getElementById("setP1").style.backgroundColor = "grey";
-            document.getElementById("setP2").style.backgroundColor = "lightgrey";
+            document.getElementById("setP1").style.backgroundColor = "#005BD6";
+            document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
+            document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
+            document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
         }
         else{
-            document.getElementById("setP2").style.backgroundColor = "grey";
-            document.getElementById("setP1").style.backgroundColor = "lightgrey";
+            document.getElementById("setP2").style.backgroundColor = "#005BD6";
+            document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
+            document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
+            document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
         }
     }
     else {
         if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
-            document.getElementById("setP2").style.backgroundColor = "grey";
-            document.getElementById("setP1").style.backgroundColor = "lightgrey";
+            document.getElementById("setP2").style.backgroundColor = "#005BD6";
+            document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
+            document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
+            document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
         }
         else{
-            document.getElementById("setP1").style.backgroundColor = "grey";
-            document.getElementById("setP2").style.backgroundColor = "lightgrey";
+            document.getElementById("setP1").style.backgroundColor = "#005BD6";
+            document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
+            document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
+            document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
         }
     }
 }
