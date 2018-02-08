@@ -42,26 +42,26 @@ function score2 (){
     points.push(P1_sets.innerHTML);
     points.push(P2_points.innerHTML);
     points.push(P2_sets.innerHTML);
-    P1_sets.innerHTML++;
+    P2_points.innerHTML++;
     check_set();
     serve_counter();
 }
 
 function check_set () {
     var P1_points = document.getElementById("P1_points");
-    var P1_sets = document.getElementById("P1_sets");
-    if ((P1_points.innerHTML >= 11) && (P1_points.innerHTML - P1_sets.innerHTML >= 2)) {
-        var P2_points = document.getElementById("P2_points");
-        P2_points.innerHTML++;
+    var P2_points = document.getElementById("P2_points");
+    if ((P1_points.innerHTML >= 11) && (P1_points.innerHTML - P2_points.innerHTML >= 2)) {
+        var P1_sets = document.getElementById("P1_sets");
+        P1_sets.innerHTML++;
         P1_points.innerHTML = 0;
-        P1_sets.innerHTML = 0;
+        P2_points.innerHTML = 0;
         check_match();
     }   
-    if ((P1_sets.innerHTML >= 11) && (P1_sets.innerHTML - P1_points.innerHTML >= 2)) {
+    if ((P2_points.innerHTML >= 11) && (P2_points.innerHTML - P1_points.innerHTML >= 2)) {
         var P2_sets = document.getElementById("P2_sets");
         P2_sets.innerHTML++;
         P1_points.innerHTML = 0;
-        P1_sets.innerHTML = 0;
+        P2_points.innerHTML = 0;
         check_match();
     }   
 }    
@@ -75,7 +75,7 @@ function check_match () {
     var z1 = x.elements[0].value;
     var y = document.getElementById("P2_name");
     var z2 = y.elements[0].value;
-    if (P2_points.innerHTML == 3) {
+    if (P1_sets.innerHTML == 3) {
         P1_points.innerHTML = 0;
         P1_sets.innerHTML = 0;
         P2_points.innerHTML = 0;
@@ -116,8 +116,8 @@ function new_game () {
 
 function serve_counter () {
     var pScore1 = Number(P1_points.innerHTML);
-    var pScore2 = Number(P1_sets.innerHTML);
-    var pSet1 = Number(P2_points.innerHTML);
+    var pScore2 = Number(P2_points.innerHTML);
+    var pSet1 = Number(P1_sets.innerHTML);
     var pSet2 = Number(P2_sets.innerHTML);
     if ((pSet1 + pSet2) % 2 == 0){
         if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
