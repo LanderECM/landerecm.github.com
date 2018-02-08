@@ -66,8 +66,6 @@ td, tr {
     display: inline-block;
     position: absolute;
     float: left;
-    margin-left: 10%;
-    margin-top: 5%;
 }
 button {
     background-color: #0B6CF0;
@@ -85,4 +83,17 @@ input {
 }
 #P2_name_change {
     background-color: #0B6CF0;
+}
+#b6 {
+    margin-top: 2%;
+    margin-left: 73%;
+    position: absolute;
+}
+#end_table {
+    margin-left: 3%;
+    margin-top: 4%;
+}
+#popup_text {
+    margin-top: 3%;
+    margin-left: 3%;
 }
