@@ -212,7 +212,7 @@ function new_game () {
     document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
     document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
     document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
-    end_table_points.length = 0;
+    points.length = 0;
     document.getElementById("popup_big").style.display = "none";
 }
 
