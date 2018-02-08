@@ -9,11 +9,8 @@ var P2_sets = document.getElementById("P2_sets");
 P2_sets.innerHTML = 0;
 }
 
-var points = new Array(4);
-points[0] = 0;
-points[1] = 0;
-points[2] = 0;
-points[3] = 0;
+var points = [];
+var end_table_points = [];
 
 function names (){
     var x = document.getElementById("P1_name");
@@ -27,11 +24,11 @@ function score1 (){
     var P1_sets = document.getElementById("P1_sets");
     var P2_points = document.getElementById("P2_points");
     var P2_sets = document.getElementById("P2_sets");
+    points.push(P1_points.innerHTML);
+    points.push(P1_sets.innerHTML);
+    points.push(P2_points.innerHTML);
+    points.push(P2_sets.innerHTML);
     P1_points.innerHTML++;
-    points[0] = P1_points.innerHTML - 1;
-    points[1] = P1_sets.innerHTML;
-    points[2] = P2_points.innerHTML;
-    points[3] = P2_sets.innerHTML;
     check_set();
     serve_counter();
 }
@@ -41,11 +38,11 @@ function score2 (){
     var P1_sets = document.getElementById("P1_sets");
     var P2_points = document.getElementById("P2_points");
     var P2_sets = document.getElementById("P2_sets");
+    points.push(P1_points.innerHTML);
+    points.push(P1_sets.innerHTML);
+    points.push(P2_points.innerHTML);
+    points.push(P2_sets.innerHTML);
     P1_sets.innerHTML++;
-    points[1] = P1_sets.innerHTML - 1;
-    points[0] = P1_points.innerHTML;
-    points[2] = P2_points.innerHTML;
-    points[3] = P2_sets.innerHTML;
     check_set();
     serve_counter();
 }
@@ -84,7 +81,7 @@ function check_match () {
         P2_points.innerHTML = 0;
         P2_sets.innerHTML = 0; 
         document.getElementById("popup_big").style.display = "block";
-        document.getElementById("popup").style.backgroundColor = "#0B6CF0";
+        document.getElementById("popup").style.backgroundColor = "#005BD6";
         document.getElementById("popup_big").style.backgroundColor = "#005BD6";
         document.getElementById("popup_text").innerHTML = "The game has ended, " + z1 + " has won the game.";
     }
@@ -94,7 +91,7 @@ function check_match () {
         P2_points.innerHTML = 0;
         P2_sets.innerHTML = 0; 
         document.getElementById("popup_big").style.display = "block";
-        document.getElementById("popup").style.backgroundColor = "#0B6CF0";
+        document.getElementById("popup").style.backgroundColor = "#005BD6";
         document.getElementById("popup_big").style.backgroundColor = "#005BD6";
         document.getElementById("popup_text").innerHTML = "The game has ended, " + z2 + " has won the game.";
     } 
@@ -105,12 +102,12 @@ function new_game () {
     P1_sets.innerHTML = 0;
     P2_points.innerHTML = 0;
     P2_sets.innerHTML = 0;
-    var new_player1 = "player 1";
-    var new_player2 = "player 2";
+    var new_player1 = "Player 1";
+    var new_player2 = "Player 2";
     document.getElementById("P1_name_btn").innerHTML  = new_player1;
     document.getElementById("P2_name_btn").innerHTML  = new_player2;
-    document.getElementById("P1_name_change").value  = "player 1";
-    document.getElementById("P2_name_change").value  = "player 2";
+    document.getElementById("P1_name_change").value  = "Player 1";
+    document.getElementById("P2_name_change").value  = "Player 2";
     document.getElementById("setP1").style.backgroundColor = "#005BD6";
     document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
     document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
@@ -157,9 +154,9 @@ function reset () {
     var P1_sets = document.getElementById("P1_sets");
     var P2_points = document.getElementById("P2_points");
     var P2_sets = document.getElementById("P2_sets");
-    P1_points.innerHTML = points[0];
-    P1_sets.innerHTML = points[1];
-    P2_points.innerHTML = points[2];
-    P2_sets.innerHTML = points[3];
+    P2_sets.innerHTML = points.pop();
+    P2_points.innerHTML = points.pop();
+    P1_sets.innerHTML = points.pop();
+    P1_points.innerHTML = points.pop();    
     serve_counter();
 }
