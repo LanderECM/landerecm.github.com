@@ -154,9 +154,11 @@ function reset () {
     var P1_sets = document.getElementById("P1_sets");
     var P2_points = document.getElementById("P2_points");
     var P2_sets = document.getElementById("P2_sets");
+    if (points.length > 0) {
     P2_sets.innerHTML = points.pop();
     P2_points.innerHTML = points.pop();
     P1_sets.innerHTML = points.pop();
     P1_points.innerHTML = points.pop();    
+    }
     serve_counter();
 }
