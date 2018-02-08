@@ -66,8 +66,8 @@ td, tr {
     display: inline-block;
     position: absolute;
     float: left;
-    margin-left: 25%;
-    margin-top: 15%;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 button {
     background-color: #0B6CF0;
