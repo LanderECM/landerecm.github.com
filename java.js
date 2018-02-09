@@ -90,53 +90,6 @@ function check_match () {
         document.getElementById("popup").style.backgroundColor = "#005BD6";
         document.getElementById("popup_big").style.backgroundColor = "#005BD6";
         document.getElementById("popup_text").innerHTML = "The game has ended, " + z1 + " has won the game.";
-        if (end_table_points.length == 6) {
-            var P1_end_points1 = end_table_points[0];
-            var P1_end_points2 = end_table_points[2];
-            var P1_end_points3 = end_table_points[4];
-            var P2_end_points1 = end_table_points[1];
-            var P2_end_points2 = end_table_points[3];
-            var P2_end_points3 = end_table_points[5];
-            document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-            document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-            document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-            document.getElementById("set4_points").innerHTML = "/";
-            document.getElementById("set5_points").innerHTML = "/";
-        }
-        else {
-            if (end_table_points.length == 8) {
-                var P1_end_points1 = end_table_points[0];
-                var P1_end_points2 = end_table_points[2];
-                var P1_end_points3 = end_table_points[4];
-                var P1_end_points4 = end_table_points[6];
-                var P2_end_points1 = end_table_points[1];
-                var P2_end_points2 = end_table_points[3];
-                var P2_end_points3 = end_table_points[5];
-                var P2_end_points4 = end_table_points[7];
-                document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-                document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-                document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-                document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
-                document.getElementById("set5_points").innerHTML = "/";
-            }
-            else {
-                var P1_end_points1 = end_table_points[0];
-                var P1_end_points2 = end_table_points[2];
-                var P1_end_points3 = end_table_points[4];
-                var P1_end_points4 = end_table_points[6];
-                var P1_end_points5 = end_table_points[8];
-                var P2_end_points1 = end_table_points[1];
-                var P2_end_points2 = end_table_points[3];
-                var P2_end_points3 = end_table_points[5];
-                var P2_end_points4 = end_table_points[7];
-                var P2_end_points5 = end_table_points[9];
-                document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-                document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-                document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-                document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
-                document.getElementById("set5_points").innerHTML = P1_end_points5 + ":" + P2_end_points5;
-            }
-        }
     }
     if (P2_sets.innerHTML == 3) {
         P1_points.innerHTML = 0;
@@ -147,54 +100,54 @@ function check_match () {
         document.getElementById("popup").style.backgroundColor = "#005BD6";
         document.getElementById("popup_big").style.backgroundColor = "#005BD6";
         document.getElementById("popup_text").innerHTML = "The game has ended, " + z2 + " has won the game.";
-        if (end_table_points.length == 6) {
+    } 
+    if (end_table_points.length == 6) {
+        var P1_end_points1 = end_table_points[0];
+        var P1_end_points2 = end_table_points[2];
+        var P1_end_points3 = end_table_points[4];
+        var P2_end_points1 = end_table_points[1];
+        var P2_end_points2 = end_table_points[3];
+        var P2_end_points3 = end_table_points[5];
+        document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
+        document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
+        document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
+        document.getElementById("set4_points").innerHTML = "/";
+        document.getElementById("set5_points").innerHTML = "/";
+    }
+    else {
+        if (end_table_points.length == 8) {
             var P1_end_points1 = end_table_points[0];
             var P1_end_points2 = end_table_points[2];
             var P1_end_points3 = end_table_points[4];
+            var P1_end_points4 = end_table_points[6];
             var P2_end_points1 = end_table_points[1];
             var P2_end_points2 = end_table_points[3];
             var P2_end_points3 = end_table_points[5];
+            var P2_end_points4 = end_table_points[7];
             document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
             document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
             document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-            document.getElementById("set4_points").innerHTML = "/";
+            document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
             document.getElementById("set5_points").innerHTML = "/";
         }
         else {
-            if (end_table_points.length == 8) {
-                var P1_end_points1 = end_table_points[0];
-                var P1_end_points2 = end_table_points[2];
-                var P1_end_points3 = end_table_points[4];
-                var P1_end_points4 = end_table_points[6];
-                var P2_end_points1 = end_table_points[1];
-                var P2_end_points2 = end_table_points[3];
-                var P2_end_points3 = end_table_points[5];
-                var P2_end_points4 = end_table_points[7];
-                document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-                document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-                document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-                document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
-                document.getElementById("set5_points").innerHTML = "/";
-            }
-            else {
-                var P1_end_points1 = end_table_points[0];
-                var P1_end_points2 = end_table_points[2];
-                var P1_end_points3 = end_table_points[4];
-                var P1_end_points4 = end_table_points[6];
-                var P1_end_points5 = end_table_points[8];
-                var P2_end_points1 = end_table_points[1];
-                var P2_end_points2 = end_table_points[3];
-                var P2_end_points3 = end_table_points[5];
-                var P2_end_points4 = end_table_points[7];
-                var P2_end_points5 = end_table_points[9];
-                document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-                document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-                document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-                document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
-                document.getElementById("set5_points").innerHTML = P1_end_points5 + ":" + P2_end_points5;
-            }
+            var P1_end_points1 = end_table_points[0];
+            var P1_end_points2 = end_table_points[2];
+            var P1_end_points3 = end_table_points[4];
+            var P1_end_points4 = end_table_points[6];
+            var P1_end_points5 = end_table_points[8];
+            var P2_end_points1 = end_table_points[1];
+            var P2_end_points2 = end_table_points[3];
+            var P2_end_points3 = end_table_points[5];
+            var P2_end_points4 = end_table_points[7];
+            var P2_end_points5 = end_table_points[9];
+            document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
+            document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
+            document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
+            document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
+            document.getElementById("set5_points").innerHTML = P1_end_points5 + ":" + P2_end_points5;
         }
-    } 
+    }
 }
 
 function new_game () {
@@ -256,9 +209,6 @@ function reset () {
     var P1_sets = document.getElementById("P1_sets");
     var P2_points = document.getElementById("P2_points");
     var P2_sets = document.getElementById("P2_sets");
-    if ((P1_points.innerHTML && P2_points.innerHTML) == 0 && (P1_sets.innerHTML + P2_sets.innerHTML) > 0) {
-        end_table_points.length = end_table_points.length - 2;
-    }
     if (points.length > 0) {
         P2_sets.innerHTML = points.pop();
         P2_points.innerHTML = points.pop();
@@ -266,5 +216,8 @@ function reset () {
         P1_points.innerHTML = points.pop();    
     }
     serve_counter();
+    if ((P1_points.innerHTML && P2_points.innerHTML) == 0 && (P1_sets.innerHTML + P2_sets.innerHTML) > 0) {
+        end_table_points.length = end_table_points.length - 2;
+    }
 }
 
