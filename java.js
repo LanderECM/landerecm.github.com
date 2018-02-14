@@ -175,32 +175,64 @@ function serve_counter () {
     var pScore2 = Number(P2_points.innerHTML);
     var pSet1 = Number(P1_sets.innerHTML);
     var pSet2 = Number(P2_sets.innerHTML);
-    if ((pSet1 + pSet2) % 2 == 0){
-        if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
-            document.getElementById("setP1").style.backgroundColor = "#005BD6";
-            document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
-            document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
-            document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
+    if ((pScore1 > 9) && (pScore2 > 9)) {
+        if ((pSet1 + pSet2) % 2 == 0){
+            if (((pScore1 + pScore2) % 2) == 0) {
+                document.getElementById("setP1").style.backgroundColor = "#005BD6";
+                document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
+            }
+            else {
+                document.getElementById("setP2").style.backgroundColor = "#005BD6";
+                document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
+            }
         }
-        else{
-            document.getElementById("setP2").style.backgroundColor = "#005BD6";
-            document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
-            document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
-            document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
+        else {
+            if (((pScore1 + pScore2) % 2) == 0) {
+                document.getElementById("setP2").style.backgroundColor = "#005BD6";
+                document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
+            }
+            else {
+                document.getElementById("setP1").style.backgroundColor = "#005BD6";
+                document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
+            }
         }
     }
     else {
-        if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
-            document.getElementById("setP2").style.backgroundColor = "#005BD6";
-            document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
-            document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
-            document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
+        if ((pSet1 + pSet2) % 2 == 0){
+            if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
+                document.getElementById("setP1").style.backgroundColor = "#005BD6";
+                document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
+            }
+            else{
+                document.getElementById("setP2").style.backgroundColor = "#005BD6";
+                document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
+            }
         }
-        else{
-            document.getElementById("setP1").style.backgroundColor = "#005BD6";
-            document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
-            document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
-            document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
+        else {
+            if (((pScore1 + pScore2) % 4 == 0) || ((pScore1 + pScore2) % 4 == 1)){
+                document.getElementById("setP2").style.backgroundColor = "#005BD6";
+                document.getElementById("P2_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP1").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P1_name_change").style.backgroundColor = "#0B6CF0";
+            }
+            else{
+                document.getElementById("setP1").style.backgroundColor = "#005BD6";
+                document.getElementById("P1_name_change").style.backgroundColor = "#005BD6";
+                document.getElementById("setP2").style.backgroundColor = "#0B6CF0";
+                document.getElementById("P2_name_change").style.backgroundColor = "#0B6CF0";
+            }   
         }
     }
 }
