@@ -94,6 +94,7 @@ input {
     margin-top: 4%;
 }
 #popup_text {
-    margin-top: 30%;
+    top: -1%;
+    position: absolute;
     margin-left: 3%;
 }
