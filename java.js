@@ -258,10 +258,10 @@ $(document).ready(function() {
     $(window).on('orientationchange', function(event) {
         if (screen.height < screen.width){
             $(".cellFont").css({
-                "font-size": "110%"
+                "font-size": "100%"
             });
             $(".cellFont1").css({
-                "font-size": "64%"
+                "font-size": "60%"
             });
         }
         else {
