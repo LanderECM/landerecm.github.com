@@ -266,6 +266,9 @@ $(document).ready(function() {
             $(".table").css({
                 "height": "95%"
             });
+            $(".btn").css({
+                "height": "24%"
+            });
         }
         else {
             $(".cellFont").css({
@@ -276,6 +279,9 @@ $(document).ready(function() {
             });
             $(".table").css({
                 "height": "99%"
+            });
+            $(".btn").css({
+                "height": "25%"
             });
         }
     });
