@@ -21,13 +21,8 @@ body, html {
 }
 td, tr {
     padding: 25px;
-    font-size: 40px;
+    font-size: 20px;
     border-bottom: 1px solid darkgrey;
-}
-.div_table {    
-    border: grey;
-    height: 74%;
-    width: 100%;
 }
 #setP1 {
     background-color: #005BD6;

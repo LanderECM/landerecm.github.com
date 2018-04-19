@@ -254,3 +254,23 @@ function reset () {
     }
 }
 
+$(document).ready(function() {
+    $(window).on('orientationchange', function(event) {
+        if (screen.height < screen.width){
+            $(".cellFont").css({
+                "font-size": "120%"
+            });
+            $(".cellFont1").css({
+                "font-size": "70%"
+            });
+        }
+        else {
+            $(".cellFont").css({
+                "font-size": "200%"
+            });
+            $(".cellFont1").css({
+                "font-size": "100%"
+            });
+        }
+    });
+});

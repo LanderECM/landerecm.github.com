@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -39,28 +40,26 @@
         </table>    
         </div>
         </div>
-        <div class="div_table">
-            <table class="table" align="center" style="width: 99.5%; height: 100%">
-                <tr style="height: 34%" id="row_top">
-                    <td style="width: 10%"></td>
-                    <td style="width: 33%">Players</td>
-                    <td style="width: 33%">Points</td>
-                    <td style="width: 24%">Sets</td>
+            <table class="table" align="center" style="width: 100%; height: 74%">
+                <tr id="row_top">
+                    <td class="cellFont" style="width: 10%"></td>
+                    <td class="cellFont" style="width: 33%; font-size: 200%">Players</td>
+                    <td class="cellFont" style="width: 33%; font-size: 200%">Points</td>
+                    <td class="cellFont" style="width: 24%; font-size: 200%">Sets</td>
                 </tr>  
-                <tr style="height: 33%" id="setP1">
-                    <td style="width: 10%"></td>
-                    <td style="width: 33%"><form id="P1_name"><input type = "text" style = "font-size: 1em; width: 50%; height: 50%;" value="Player 1" id="P1_name_change"/></form></td>
-                    <td style="width: 33%"><p id = "P1_points"></p></td>
-                    <td style="width: 24%"><p id = "P1_sets"></p></td>
+                <tr id="setP1">
+                    <td class="cellFont" style="width: 10%; font-size: 200%"></td>
+                    <td style="width: 33%"><form id="P1_name" class="cellFont1"><input type = "text" style = "font-size: 175%; width: 50%; height: 50%;" value="Player 1" id="P1_name_change"/></form></td>
+                    <td class="cellFont" style="width: 33%; font-size: 200%"><p id = "P1_points"></p></td>
+                    <td class="cellFont" style="width: 24%; font-size: 200%"><p id = "P1_sets"></p></td>
                 </tr>
-                <tr style="height: 33%" id="setP2">
-                    <td style="width: 10%"></td>
-                    <td style="width: 33%"><form id="P2_name"><input type = "text" style = "font-size: 1em; width: 50%; height: 50%;"  value="Player 2" id="P2_name_change"/></form></td>
-                    <td style="width: 33%"><p id = "P2_points"></p></td>
-                    <td style="width: 24%"><p id = "P2_sets"></p></td>
+                <tr id="setP2">
+                    <td class="cellFont" style="width: 10%"></td>
+                    <td style="width: 33%"><form id="P2_name" class="cellFont1"><input type = "text" style = "font-size: 175%; width: 50%; height: 50%;"  value="Player 2" id="P2_name_change"/></form></td>
+                    <td class="cellFont" style="width: 33%; font-size: 200%"><p id = "P2_points"></p></td>
+                    <td class="cellFont" style="width: 24%; font-size: 200%"><p id = "P2_sets"></p></td>
                 </tr>
             </table>
-        </div>
         <div class="btn" align="middle" style="width: 99.5%; height: 25%">
             <div style = "width: 33%; height: 100%" class="div1">
             <button onClick = "score1()"   id = "b1" style="width: 100%; height: 100%; font-size: 40px"><p id="P1_name_btn">Player 1</p></button> 
