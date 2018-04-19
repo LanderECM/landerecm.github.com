@@ -254,37 +254,6 @@ function reset () {
     }
 }
 
-function rotate (){
-        if (screen.height < screen.width){
-            $(".cellFont").css({
-                "font-size": "100%"
-            });
-            $(".cellFont1").css({
-                "font-size": "50%"
-            });
-            $(".table").css({
-                "height": "95%"
-            });
-            $(".btn").css({
-                "height": "20%"
-            });
-        }
-        else {
-            $(".cellFont").css({
-                "font-size": "200%"
-            });
-            $(".cellFont1").css({
-                "font-size": "100%"
-            });
-            $(".table").css({
-                "height": "99%"
-            });
-            $(".btn").css({
-                "height": "25%"
-            });
-        }
-}
-
 $(document).ready(function() {
     $(window).on('orientationchange', function(event) {
         if (screen.height < screen.width){
@@ -299,6 +268,7 @@ $(document).ready(function() {
             });
             $(".btn").css({
                 "height": "20%"
+                "margin-bottom": "3%"
             });
         }
         else {
