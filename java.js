@@ -275,7 +275,7 @@ $(document).ready(function() {
                 "font-size": "100%"
             });
             $(".table").css({
-                "height": "100%"
+                "height": "99%"
             });
         }
     });
