@@ -269,7 +269,7 @@ $(document).ready(function() {
                 "height": "95%"
             });
             $(".btn").css({
-                "height": "24%"
+                "height": "20%"
             });
         }
         else {
