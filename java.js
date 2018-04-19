@@ -263,7 +263,7 @@ $(document).ready(function() {
             $(".cellFont1").css({
                 "font-size": "50%"
             });
-            $("#div_table").css({
+            $(".table").css({
                 "height": "95%"
             });
         }
