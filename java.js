@@ -261,7 +261,7 @@ $(document).ready(function() {
                 "font-size": "100%"
             });
             $(".cellFont1").css({
-                "font-size": "60%"
+                "font-size": "50%"
             });
         }
         else {
