@@ -7,6 +7,7 @@ var P2_points = document.getElementById("P2_points");
 P2_points.innerHTML = 0;
 var P2_sets = document.getElementById("P2_sets");
 P2_sets.innerHTML = 0;
+rotate();
 }
 
 var points = [];
@@ -254,6 +255,7 @@ function reset () {
     }
 }
 
+function rotate (){
 $(document).ready(function() {
     $(window).on('orientationchange', function(event) {
         if (screen.height < screen.width){
@@ -286,3 +288,4 @@ $(document).ready(function() {
         }
     });
 });
+}
