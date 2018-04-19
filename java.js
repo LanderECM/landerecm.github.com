@@ -264,7 +264,7 @@ $(document).ready(function() {
                 "font-size": "50%"
             });
             $("#div_table").css({
-                "height": "72%"
+                "height": "95%"
             });
         }
         else {
@@ -274,8 +274,8 @@ $(document).ready(function() {
             $(".cellFont1").css({
                 "font-size": "100%"
             });
-            $("#div_table").css({
-                "height": "74%"
+            $(".table").css({
+                "height": "100%"
             });
         }
     });
