@@ -279,10 +279,10 @@ $(document).ready(function() {
 function rotate() {
     if (screen.height < screen.width){
             $(".cellFont").css({
-                "font-size": "100%"
+                "font-size": "125%"
             });
             $(".cellFont1").css({
-                "font-size": "50%"
+                "font-size": "75%"
             });
         }
         else {
