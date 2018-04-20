@@ -263,12 +263,6 @@ $(document).ready(function() {
             $(".cellFont1").css({
                 "font-size": "50%"
             });
-            $(".table").css({
-                "height": "95%"
-            });
-            $(".btn").css({
-                "margin-bottom": "3%"
-            });
         }
         else {
             $(".cellFont").css({
@@ -276,12 +270,6 @@ $(document).ready(function() {
             });
             $(".cellFont1").css({
                 "font-size": "100%"
-            });
-            $(".table").css({
-                "height": "99%"
-            });
-            $(".btn").css({
-                "height": "25%"
             });
         }
     });
