@@ -274,3 +274,22 @@ $(document).ready(function() {
         }
     });
 });
+
+function rotate() {
+    if (screen.height < screen.width){
+            $(".cellFont").css({
+                "font-size": "100%"
+            });
+            $(".cellFont1").css({
+                "font-size": "50%"
+            });
+        }
+        else {
+            $(".cellFont").css({
+                "font-size": "200%"
+            });
+            $(".cellFont1").css({
+                "font-size": "100%"
+            });
+        }
+    }
