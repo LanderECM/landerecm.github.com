@@ -9,6 +9,8 @@ var P2_sets = document.getElementById("P2_sets");
 P2_sets.innerHTML = 0;
 }
 
+window.onload = rotate();
+
 var points = [];
 var end_table_points = [];
 
