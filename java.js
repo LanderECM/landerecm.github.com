@@ -267,7 +267,7 @@ $(document).ready(function() {
                 "height": "95%"
             });
             $(".btn").css({
-                "height": "20%"
+                "height": "20%",
                 "margin-bottom": "3%"
             });
         }
