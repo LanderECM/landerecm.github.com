@@ -109,9 +109,9 @@ function check_match () {
         var P2_end_points1 = end_table_points[1];
         var P2_end_points2 = end_table_points[3];
         var P2_end_points3 = end_table_points[5];
-        document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-        document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-        document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
+        document.getElementById("set1_points").innerHTML = P1_end_points1 + " : " + P2_end_points1;
+        document.getElementById("set2_points").innerHTML = P1_end_points2 + " : " + P2_end_points2;
+        document.getElementById("set3_points").innerHTML = P1_end_points3 + " : " + P2_end_points3;
         document.getElementById("set4_points").innerHTML = "/";
         document.getElementById("set5_points").innerHTML = "/";
     }
@@ -125,10 +125,10 @@ function check_match () {
             var P2_end_points2 = end_table_points[3];
             var P2_end_points3 = end_table_points[5];
             var P2_end_points4 = end_table_points[7];
-            document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-            document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-            document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-            document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
+            document.getElementById("set1_points").innerHTML = P1_end_points1 + " : " + P2_end_points1;
+            document.getElementById("set2_points").innerHTML = P1_end_points2 + " : " + P2_end_points2;
+            document.getElementById("set3_points").innerHTML = P1_end_points3 + " : " + P2_end_points3;
+            document.getElementById("set4_points").innerHTML = P1_end_points4 + " : " + P2_end_points4;
             document.getElementById("set5_points").innerHTML = "/";
         }
         else {
@@ -142,11 +142,11 @@ function check_match () {
             var P2_end_points3 = end_table_points[5];
             var P2_end_points4 = end_table_points[7];
             var P2_end_points5 = end_table_points[9];
-            document.getElementById("set1_points").innerHTML = P1_end_points1 + ":" + P2_end_points1;
-            document.getElementById("set2_points").innerHTML = P1_end_points2 + ":" + P2_end_points2;
-            document.getElementById("set3_points").innerHTML = P1_end_points3 + ":" + P2_end_points3;
-            document.getElementById("set4_points").innerHTML = P1_end_points4 + ":" + P2_end_points4;
-            document.getElementById("set5_points").innerHTML = P1_end_points5 + ":" + P2_end_points5;
+            document.getElementById("set1_points").innerHTML = P1_end_points1 + " : " + P2_end_points1;
+            document.getElementById("set2_points").innerHTML = P1_end_points2 + " : " + P2_end_points2;
+            document.getElementById("set3_points").innerHTML = P1_end_points3 + " : " + P2_end_points3;
+            document.getElementById("set4_points").innerHTML = P1_end_points4 + " : " + P2_end_points4;
+            document.getElementById("set5_points").innerHTML = P1_end_points5 + " : " + P2_end_points5;
         }
     }
 }
